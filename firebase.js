@@ -9,25 +9,28 @@
 // 6. In Firebase Console → Build → Firestore Database → Create database (start in test mode)
 // ─────────────────────────────────────────────────────────────
 
+import { Platform } from "react-native";
 import { initializeApp } from "firebase/app";
-import { initializeAuth, getReactNativePersistence } from "firebase/auth";
+import { initializeAuth, getAuth, getReactNativePersistence } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
-// TODO: Replace with YOUR Firebase project config
 const firebaseConfig = {
-  apiKey: "AIzaSy...",           // your actual key
-  authDomain: "moneytracker-xxxx.firebaseapp.com",
-  projectId: "moneytracker-xxxx",
-  storageBucket: "moneytracker-xxxx.appspot.com",
-  messagingSenderId: "123456789",
-  appId: "1:123456789:web:abc123"
+  apiKey: "AIzaSyBymt2JSoPTEXhSlTfWNs7w5w2ESO80NQE",
+  authDomain: "moneytracker-d76d9.firebaseapp.com",
+  projectId: "moneytracker-d76d9",
+  storageBucket: "moneytracker-d76d9.firebasestorage.app",
+  messagingSenderId: "963827661450",
+  appId: "1:963827661450:web:9bbce407daea0ae383cb73"
 };
 
 const app = initializeApp(firebaseConfig);
 
-export const auth = initializeAuth(app, {
-  persistence: getReactNativePersistence(AsyncStorage),
-});
+export const auth =
+  Platform.OS === "web"
+    ? getAuth(app)
+    : initializeAuth(app, {
+        persistence: getReactNativePersistence(AsyncStorage),
+      });
 
 export const db = getFirestore(app);
