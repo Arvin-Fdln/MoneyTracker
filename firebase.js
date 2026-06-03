@@ -16,12 +16,12 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 
 // TODO: Replace with YOUR Firebase project config
 const firebaseConfig = {
-  apiKey: "AIzaSyBymt2JSoPTEXhSlTfWNs7w5w2ESO80NQE",
-  authDomain: "moneytracker-d76d9.firebaseapp.com",
-  projectId: "moneytracker-d76d9",
-  storageBucket: "moneytracker-d76d9.firebasestorage.app",
-  messagingSenderId: "963827661450",
-  appId: "1:963827661450:web:9bbce407daea0ae383cb73"
+  apiKey: "AIzaSy...",           // your actual key
+  authDomain: "moneytracker-xxxx.firebaseapp.com",
+  projectId: "moneytracker-xxxx",
+  storageBucket: "moneytracker-xxxx.appspot.com",
+  messagingSenderId: "123456789",
+  appId: "1:123456789:web:abc123"
 };
 
 const app = initializeApp(firebaseConfig);
