@@ -9,7 +9,9 @@
     "splash": {
       "backgroundColor": "#1D9E75"
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": false,
       "bundleIdentifier": "com.yourname.moneytracker"
@@ -22,6 +24,11 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "5d611988-39b7-4ee3-ac4d-77d38a03751c"
+      }
     }
   }
 }
